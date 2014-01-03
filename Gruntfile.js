@@ -66,43 +66,44 @@ module.exports = function(grunt) {
             }
         },
 
-        autoshot: {
-            default_options: {
-                options: {
-                    // necessary config
-                    path: 'screenshots/',
-                    filename: '',
-                    type: 'PNG',
-                    // optional config, must set either remote or local
-                    remote: 'http://localhost:<%= connect.options.port %>',
-                    viewport: ['320x480','480x320','384x640','640x384','602x963','963x602','600x960','960x600','800x1280','1280x800','768x1024','1024x768']
-                }
-            }
-        },
-        
-        responsive_images: {
-            dev: {
-                options: {
-                    sizes: [
-                        {
-                            width: 320,
-                        },
-                        {
-                            width: 640
-                        },
-                        {
-                            width: 1024
-                        }
-                    ]
-                },
-                files: [{
-                    expand: true,
-                    cwd: '<%= yeoman.app %>/images',
-                    src: '{,*/}*.{png,jpg,jpeg}',
-                    dest: '<%= yeoman.dist %>/images'
-                }]
-            }
-        },
+//        autoshot: {
+//            default_options: {
+//                options: {
+//                    // necessary config
+//                    path: 'screenshots/',
+//                    filename: '',
+//                    type: 'PNG',
+//                    // optional config, must set either remote or local
+//                    remote: 'http://localhost:<%= connect.options.port %>',
+//                    viewport: ['320x480','480x320','384x640','640x384','602x963','963x602','600x960','960x600','800x1280','1280x800','768x1024','1024x768']
+//                }
+//            }
+//        },
+
+
+//        responsive_images: {
+//            dev: {
+//                options: {
+//                    sizes: [
+//                        {
+//                            width: 320,
+//                        },
+//                        {
+//                            width: 640
+//                        },
+//                        {
+//                            width: 1024
+//                        }
+//                    ]
+//                },
+//                files: [{
+//                    expand: true,
+//                    cwd: '<%= yeoman.app %>/images',
+//                    src: '{,*/}*.{png,jpg,jpeg}',
+//                    dest: '<%= yeoman.dist %>/images'
+//                }]
+//            }
+//        },
         // The actual grunt server settings
         connect: {
             options: {
@@ -155,24 +156,24 @@ module.exports = function(grunt) {
         },
 
         // Make sure code styles are up to par and there are no obvious mistakes
-        jshint: {
-            options: {
-                jshintrc: '.jshintrc',
-                reporter: require('jshint-stylish')
-            },
-            all: [
-                'Gruntfile.js',
-                '<%= yeoman.app %>/scripts/{,*/}*.js',
-                '!<%= yeoman.app %>/scripts/vendor/*',
-                'test/spec/{,*/}*.js'
-            ],
-            test: {
-                options: {
-                    jshintrc: 'test/.jshintrc'
-                },
-                src: ['test/spec/{,*/}*.js']
-            }
-        },
+//        jshint: {
+//            options: {
+//                jshintrc: '.jshintrc',
+//                reporter: require('jshint-stylish')
+//            },
+//            all: [
+//                'Gruntfile.js',
+//                '<%= yeoman.app %>/scripts/{,*/}*.js',
+//                '!<%= yeoman.app %>/scripts/vendor/*',
+//                'test/spec/{,*/}*.js'
+//            ],
+//            test: {
+//                options: {
+//                    jshintrc: 'test/.jshintrc'
+//                },
+//                src: ['test/spec/{,*/}*.js']
+//            }
+//        },
 
         // Compiles Sass to CSS and generates necessary files if requested
         compass: {
@@ -228,36 +229,36 @@ module.exports = function(grunt) {
         //         }]
         //     }
         // },
-        svgmin: {
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= yeoman.app %>/images',
-                    src: '{,*/}*.svg',
-                    dest: '<%= yeoman.dist %>/images'
-                }]
-            }
-        },
-        htmlmin: {
-            dist: {
-                options: {
-                    collapseBooleanAttributes: true,
-                    collapseWhitespace: true,
-                    removeAttributeQuotes: true,
-                    removeCommentsFromCDATA: true,
-                    removeEmptyAttributes: true,
-                    removeOptionalTags: true,
-                    removeRedundantAttributes: true,
-                    useShortDoctype: true
-                },
-                files: [{
-                    expand: true,
-                    cwd: '<%= yeoman.dist %>',
-                    src: '{,*/}*.html',
-                    dest: '<%= yeoman.dist %>'
-                }]
-            }
-        },
+//        svgmin: {
+//            dist: {
+//                files: [{
+//                    expand: true,
+//                    cwd: '<%= yeoman.app %>/images',
+//                    src: '{,*/}*.svg',
+//                    dest: '<%= yeoman.dist %>/images'
+//                }]
+//            }
+//        },
+//        htmlmin: {
+//            dist: {
+//                options: {
+//                    collapseBooleanAttributes: true,
+//                    collapseWhitespace: true,
+//                    removeAttributeQuotes: true,
+//                    removeCommentsFromCDATA: true,
+//                    removeEmptyAttributes: true,
+//                    removeOptionalTags: true,
+//                    removeRedundantAttributes: true,
+//                    useShortDoctype: true
+//                },
+//                files: [{
+//                    expand: true,
+//                    cwd: '<%= yeoman.dist %>',
+//                    src: '{,*/}*.html',
+//                    dest: '<%= yeoman.dist %>'
+//                }]
+//            }
+//        },
 
         // Renames files for browser caching purposes
         rev: {
@@ -370,7 +371,7 @@ module.exports = function(grunt) {
                 'compass',
                 'copy:styles',
                 //'imagemin',
-                'svgmin'
+                //'svgmin'
             ]
         }
     });
@@ -421,11 +422,11 @@ module.exports = function(grunt) {
         'modernizr',
         //'rev',
         'usemin',
-        'htmlmin'
+        //'htmlmin'
     ]);
 
     grunt.registerTask('default', [
-        'newer:jshint',
+        //'newer:jshint',
         'test',
         'build'
     ]);
