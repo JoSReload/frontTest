@@ -332,7 +332,7 @@ module.exports = function(grunt) {
                         '.htaccess',
                         'images/{,*/}*.webp',
                         '{,*/}*.html',
-                        'styles/fonts/{,*/}*.*',
+                        'styles/fonts/{,*/}*.*'
                     ]
                 }]
             },
@@ -369,7 +369,7 @@ module.exports = function(grunt) {
             ],
             dist: [
                 'compass',
-                'copy:styles',
+                'copy:styles'
                 //'imagemin',
                 //'svgmin'
             ]
@@ -400,7 +400,7 @@ module.exports = function(grunt) {
             grunt.task.run([
                 'clean:server',
                 'concurrent:test',
-                'autoprefixer',
+                'autoprefixer'
             ]);
         }
 
@@ -419,9 +419,9 @@ module.exports = function(grunt) {
         'cssmin',
         'uglify',
         'copy:dist',
-        'modernizr',
+        //'modernizr',
         //'rev',
-        'usemin',
+        'usemin'
         //'htmlmin'
     ]);
 
