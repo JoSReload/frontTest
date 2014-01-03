@@ -4,3 +4,9 @@ node_modules
 .sass-cache
 app_design/bower_components/
 dist_design
+/bootstrap/compiled.php
+/vendor
+composer.phar
+composer.lock
+.DS_Store
+Thumbs.db
