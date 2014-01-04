@@ -8,5 +8,6 @@ dist_design
 /vendor
 composer.phar
 composer.lock
+npm-debug.log
 .DS_Store
 Thumbs.db
