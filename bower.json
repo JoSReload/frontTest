@@ -1,7 +1,8 @@
 {
-	"name": "BorisTest",
+	"name": "frontTest",
 	"private": true,
 	"dependencies": {
+        "foundation": "zurb/bower-foundation",
 		"modernizr": "~2.6.2",
 		"backbone": "~1.1.0",
 		"underscore": "~1.5.2",
