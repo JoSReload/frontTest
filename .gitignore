@@ -2,6 +2,7 @@ node_modules
 .tmp
 .idea
 .sass-cache
+.directory
 app_design/bower_components/
 dist_design
 /bootstrap/compiled.php
