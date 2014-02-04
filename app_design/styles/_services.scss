@@ -1,0 +1,40 @@
+#services {
+  .intro-services{
+    h1,p{
+      color: $font-clara;
+    }
+    background-color: $colordarkgrey;
+    .intro-1{
+    }
+    .intro-2{
+
+    }
+  }
+
+  .services{
+    .first{
+      background-color: $color-first-service;
+      height: 300px;
+    }
+    .second{
+      background-color: $color-second-service;
+      height: 300px
+    }
+    .thirth{
+      background-color: $color-thirth-service;
+      height: 300px
+    }
+    .fourth{
+      background-color: $color-fourth-service;
+      height: 300px
+    }
+  }
+
+  .service-list{
+    background-color: $colordarkgrey;
+    height: 300px;
+    h1,p{
+      color: $font-clara;
+    }
+  }
+}
