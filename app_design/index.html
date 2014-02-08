@@ -26,39 +26,43 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
   
-  <nav class="top-bar hide-for-small">
+    <div class="fixed">
+      <nav class="top-bar hide-for-small">
       <ul class="title-area">
-          <li class="name"><h1><a href="#">CHENKA</a></h1>
-          </li>
+        <li class="name">
+          <h1><a href="#">CHENKA</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
       </ul>
-      <section class="top-bar-section">
-          <ul class="left">
-            <li class="divider"></li>
-            <li class="active"><a href="#">Menu Item 1</a></li>
-            <li class=""><a href="#">Menu Item 2</a></li>
-            <li class="has-dropdown"><a href="#">Menu Item 3</a>
-              <ul class="dropdown">
-                <li><a href="#">Submenu Item 1</a></li>
-                <li><a href="#">Submenu Item 2</a></li>
-                <li><a href="#">Submenu Item 3</a></li>
-                <li><a href="#">Submenu Item 4</a></li>
-              </ul>
-            </li>
-            <li class=""><a href="#">Menu Item 4</a></li>
-          </ul>
+      <section class="top-bar-section menu-social-links">
+        <ul class="right">
+          <li class="divider"></li>
+          <li class=""><a href="#">facebook</a></li>
+          <li class=""><a href="#">twitter</a></li>
+          <li class=""><a href="#">Behance</a></li>
+        </ul>
       </section>
-  </nav>
+      <section class="top-bar-section menu-sections">
+        <ul class="right">
+          <li class="active"><a href="#">ABOUT</a></li>
+          <li class=""><a href="#">WORK</a></li>
+          <li class=""><a href="#">SERVICES</a></li>
+          <li class=""><a href="#">CONTACT</a></li>
+        </ul>
+      </section>
+    </nav>
+  </div>
 
   <div class="off-canvas-wrap">
     <div class="inner-wrap">
-      <nav class="tab-bar show-for-small">
+      <div class="fixed"><nav class="tab-bar show-for-small">
         <section class="left-small">
           <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
         </section>
         <section class="middle tab-bar-section">
           <h1 class="title">CHENKA</h1>
         </section>
-      </nav>
+      </nav></div>
       <aside class="left-off-canvas-menu">
         <ul class="off-canvas-list">
           <li><label>Chenka Menu</label></li>
@@ -72,25 +76,31 @@
       <section>
 
 
-        <div id="home">
+        <section id="home" class="row">
           <!--
             Presentation
           -->
-          <div class="row presentation">
-            <div class="large-16 columns">
+          <div class="large-16 columns presentation">
+            <div class="inner">
               <h1>PRESENTACION</h1>
             </div>
           </div>
-        </div>
+          <!--
+            Arrow Down
+          -->
+          <div class="row arrow-down">
+            <div class="large-16 columns">Flecha Negra</div>
+          </div>
+        </section>
 
         <!--
           ABOUT
         -->
-        <div id="about" class="row">
+        <section id="about" class="row">
           <!--
             About Chenka
           -->
-          <div class="row about-chenka">
+          <section class="row about-chenka">
             <div class="large-8 columns intro-1">
               <div class="inner">
                 <h1>About Chenka</h1>
@@ -101,33 +111,26 @@
                 <h1>Sigue info</h1>
               </div>
             </div>
-          </div>
-
-          <!--
-            Arrow Down
-          -->
-          <div class="row arrow-down">
-            <div class="large-16 columns">Flecha Negra</div>
-          </div>
+          </section>
 
           <!--
             Our Philosophy
           -->
-          <div class="row philosophy">
+          <section class="row philosophy">
             <div class="large-16 columns">
               <div class="inner">
                 <h1>PHILOSOPHY</h1>
               </div>
             </div>
-          </div>
-        </div>
+          </section>
+        </section>
 
 
-        <div id="services" class="row">
+        <section id="services" class="row">
           <!--
             Our Services
           -->
-          <div class="row intro-services">
+          <section class="row intro-services">
             <div class="large-8 columns intro-1">
               <div class="inner">
                 <h1>Our Services</h1>
@@ -139,119 +142,146 @@
                 <p>sigue texto feo</p>
               </div>
             </div>
-          </div>
+          </section>
 
           <!--
             List of Skills
           -->
-          <div class="row services">
-            <div class="large-4 columns first">
+          <section class="row services">
+            <div class="medium-8 large-4 columns first">
               <div class="inner"><h1>Strategy</h1></div>
             </div>
-            <div class="large-4 columns second">
+            <div class="medium-8 large-4 columns second">
               <div class="inner"><h1>Creative</h1></div>
             </div>
-            <div class="large-4 columns thirth">
+            <div class="medium-8 large-4 columns thirth">
               <div class="inner"><h1>Digital</h1></div>
             </div>
-            <div class="large-4 columns fourth">
+            <div class="medium-8 large-4 columns fourth">
               <div class="inner"><h1>Support</h1></div>
             </div>
-          </div>
+          </section>
 
           <!--
             List of Services
           -->
-          <div class="row service-list  ">
-            <div class="large-4 columns">
+          <section class="row service-list  ">
+            <div class="medium-8 large-4 columns">
               <h1>List 1</h1>
+              <ul>
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>D</li>
+              </ul>
             </div>
-            <div class="large-4 columns">
+            <div class="medium-8 large-4 columns">
               <h1>List 2</h1>
+              <ul>
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>D</li>
+              </ul>
             </div>
-            <div class="large-4 columns">
+            <div class="medium-8 large-4 columns">
               <h1>List 3</h1>
+              <ul>
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>D</li>
+              </ul>
             </div>
-            <div class="large-4 columns">
+            <div class="medium-8 large-4 columns">
               <h1>List 4</h1>
+              <ul>
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>D</li>
+              </ul>
             </div>
-          </div>
-        </div>
+          </section>
+        </section>
 
         <!--
           Our Clients
         -->
-        <div id="clients" class="row">
-          <div class="large-8 columns intro-clients">
+        <section id="clients" class="row">
+          <div class="medium-8 large-8 columns intro-clients">
             <div class="inner"><h1>Our Clients</h1></div>
           </div>
-          <div class="large-8 columns list-clients">
-            <div class="inner"><p>sigue info</p></div>
+          <div class="medium-8 large-8 columns list-clients">
+            <div class="inner"><h1>List Clients</h1></div>
+            <ul>
+              <li>A</li>
+              <li>B</li>
+              <li>C</li>
+              <li>D</li>
+            </ul>
           </div>
-        </div>
+        </section>
 
 
         <!--
           WORK
         -->
-        <div id="work" class="row">
+        <section id="work" class="row">
           <!--
             Our Work
           -->
-          <div class="row intro-work">
+          <section class="row intro-work">
             <div class="large-16 columns">
               <div class="inner"><h1>Our Work</h1></div>
             </div>
-          </div>
+          </section>
 
           <!--
             WORKS
           -->
 
-          <!--Feature Project-->
-          <div class="row">
-            <div class="large-8 columns">Image Project</div>
-            <div class="large-8 columns"><h1>Title Project</h1></div>
-          </div>
+          <section class="work-list">
+            <!--Feature Project-->
 
-          <!-- Projects-->
-          <div class="row">
-            <div class="large-4 columns"><h1>Title Project</h1></div>
-            <div class="large-4 columns"><h1>Title Project</h1></div>
-            <div class="large-4 columns"><h1>Title Project</h1></div>
-            <div class="large-4 columns"><h1>Title Project</h1></div>
-          </div>
-          <!-- Projects-->
-          <div class="row">
-            <div class="large-4 columns"><h1>Title Project</h1></div>
-            <div class="large-4 columns"><h1>Title Project</h1></div>
-            <div class="large-4 columns"><h1>Title Project</h1></div>
-            <div class="large-4 columns"><h1>Title Project</h1></div>
-          </div>
-          <!-- Projects-->
-          <div class="row">
-            <div class="large-4 columns"><h1>Title Project</h1></div>
-            <div class="large-4 columns"><h1>Title Project</h1></div>
-            <div class="large-4 columns"><h1>Title Project</h1></div>
-            <div class="large-4 columns"><h1>Title Project</h1></div>
-          </div>
-        </div>
+            <div class="row">
+              <section class="work-feature">
+                <div class="large-8 columns">Image Project</div>
+                <div class="large-8 columns"><h1>Title Project</h1></div>
+              </section>
+            </div>
+
+            <ul class="mosaic-work ">
+              <li><h1>Title Project</h1></li>
+              <li><h1>Title Project</h1></li>
+              <li><h1>Title Project</h1></li>
+              <li><h1>Title Project</h1></li>
+              <li><h1>Title Project</h1></li>
+              <li><h1>Title Project</h1></li>
+              <li><h1>Title Project</h1></li>
+              <li><h1>Title Project</h1></li>
+              <li><h1>Title Project</h1></li>
+              <li><h1>Title Project</h1></li>
+              <li><h1>Title Project</h1></li>
+              <li><h1>Title Project</h1></li>
+            </ul>
+        </section>
 
 
         <!--
           CONTACT
         -->
-        <div id="contact" class="row">
+        <section id="contact" class="row">
           <div class="large-16 columns">
             <h1>Contact Us</h1>
           </div>
-        </div>
+        </section>
 
 
         <!--
           Footer
         -->
-        <div id="footer" class="row">
+        <section id="footer" class="row">
           <footer class="large-16 columns">
             <div class="inner">
               <p>Copyright © 2014 CHENKA™.
@@ -261,7 +291,7 @@
             </div>
             <a class="top" href="#">Go to Top</a>
           </footer>
-        </div>
+        </section>
 
 
 

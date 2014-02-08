@@ -2,7 +2,7 @@
 	"name": "frontTest",
 	"private": true,
 	"dependencies": {
-        "foundation": "master",
+        "foundation": "~5.1.0",
 		"modernizr": "~2.6.2",
 		"backbone": "~1.1.0",
 		"underscore": "~1.5.2",

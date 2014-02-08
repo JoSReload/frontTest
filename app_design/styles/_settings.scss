@@ -38,13 +38,14 @@ $total-columns: 16;
 
 // We use these to control various global styles
 // $body-bg: #fff;
+$body-bg: #dedede;
 // $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-family: 'Open Sans', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
 
 // We use this to control font-smoothing
-// $font-smoothing: antialiased;
+$font-smoothing: antialiased;
 
 // We use these to control text direction settings
 // $text-direction: ltr;
@@ -488,6 +489,9 @@ $total-columns: 16;
 // $tabbar-line-height: $tabbar-height;
 // $tabbar-color: #FFF;
 // $tabbar-middle-padding: 0 rem-calc(10);
+$tabbar-bg: #000;
+$tabbar-height: rem-calc(60);
+$tabbar-line-height: $tabbar-height;
 
 // Off Canvas Divider Styles
 // $tabbar-right-section-border: solid 1px lighten($tabbar-bg, 10%);
@@ -502,6 +506,7 @@ $total-columns: 16;
 // Off Canvas Menu Variables
 // $off-canvas-width: 250px;
 // $off-canvas-bg: #333;
+$off-canvas-bg: #000;
 
 // Off Canvas Menu List Variables
 // $off-canvas-label-padding: 0.3rem rem-calc(15);
@@ -522,13 +527,16 @@ $total-columns: 16;
 
 // $tabbar-menu-icon-text-indent: rem-calc(35);
 // $tabbar-menu-icon-width: $tabbar-height;
-// $tabbar-menu-icon-height: $tabbar-height;
+$tabbar-menu-icon-height: $tabbar-height;
 // $tabbar-menu-icon-line-height: rem-calc(33);
 // $tabbar-menu-icon-padding: 0;
 
 // $tabbar-hamburger-icon-width: rem-calc(16);
 // $tabbar-hamburger-icon-left: rem-calc(13);
 // $tabbar-hamburger-icon-top: rem-calc(5);
+$tabbar-hamburger-icon-width: rem-calc(20);
+$tabbar-hamburger-icon-left: rem-calc(20);
+$tabbar-hamburger-icon-top: rem-calc(13);
 
 // Off Canvas Back-Link Overlay
 // $off-canvas-overlay-transition: background 300ms ease;
@@ -932,11 +940,11 @@ $total-columns: 16;
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: #333;
+$topbar-bg-color: #000;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-// $topbar-height: 45px;
+$topbar-height: 70px;
 // $topbar-margin-bottom: 0;
 
 // Control Input height for top bar
@@ -944,6 +952,7 @@ $total-columns: 16;
 // Controlling the styles for the title in the top bar
 // $topbar-title-weight: normal;
 // $topbar-title-font-size: rem-calc(17);
+$topbar-title-font-size: rem-calc(20);
 
 // Style the top bar dropdown elements
 // $topbar-dropdown-bg: #333;
@@ -959,11 +968,13 @@ $total-columns: 16;
 // $topbar-link-color-active: #fff;
 // $topbar-link-weight: normal;
 // $topbar-link-font-size: rem-calc(13);
+$topbar-link-font-size: rem-calc(20);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg-hover: #272727  ;
 // $topbar-link-bg-active: $primary-color;
 // $topbar-link-bg-active-hover: darken($primary-color, 5%);
 // $topbar-link-font-family: $body-font-family;
+$topbar-link-font-family: BebasNeue Regular;
 
 // $topbar-button-font-size: 0.75rem;
 
@@ -999,6 +1010,7 @@ $total-columns: 16;
 $header-line-height: 1;
 $header-top-margin: 0;
 $header-bottom-margin: 0;
+$header-font-family: BebasNeue Bold, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 
 $paragraph-line-height: 1;
 $paragraph-margin-bottom: 0;

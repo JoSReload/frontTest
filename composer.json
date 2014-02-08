@@ -7,6 +7,10 @@
 		"laravel/framework": "4.1.*",
         "rcrowe/twigbridge": "0.5.*"
 	},
+    "require-dev": {
+        "way/generators": "dev-master"
+    },
+
 	"autoload": {
 		"classmap": [
 			"app/commands",

@@ -53,7 +53,8 @@ module.exports = function(grunt) {
                 files: [
                     '<%= yeoman.app %>/{,*/}*.html',
                     '.tmp/styles/{,*/}*.css',
-                    '<%= yeoman.app %>/images/{,*/}*.{gif,jpeg,jpg,png,svg,webp}'
+                    '<%= yeoman.app %>/images/{,*/}*.{gif,jpeg,jpg,png,svg,webp}',
+                    '<%= yeoman.app %>/styles/fonts/*.{otf}'
                 ]
             }
         },
@@ -189,7 +190,8 @@ module.exports = function(grunt) {
                 importPath: '<%= yeoman.app %>/bower_components/foundation/scss',
                 httpImagesPath: '/images',
                 httpGeneratedImagesPath: '/images/generated',
-                httpFontsPath: '/styles/fonts',
+                //httpFontsPath: '/styles/fonts',
+                httpFontsPath: 'fonts',
                 relativeAssets: false,
                 assetCacheBuster: false
             },
