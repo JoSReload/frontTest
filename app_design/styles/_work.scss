@@ -1,6 +1,5 @@
 #work{
 
-
   .intro-work{
     background-color: $colordarkgrey;
     h1, p{
@@ -10,6 +9,19 @@
 
     }
   }
+  .work-list{
+    .mosaic-work{
+      @include block-grid(1);
 
+      @media #{$medium-only} {
+        @include block-grid(3);
+      }
+
+      @media #{$large-up} {
+        @include block-grid(4);
+      }
+
+    }
+  }
 
 }

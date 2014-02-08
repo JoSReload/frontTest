@@ -1,0 +1,10 @@
+#home{
+  @media #{$medium-up} {
+    margin-top: rem-calc(70);
+  }
+  margin-top: rem-calc(60);
+  .presentation{
+
+  }
+
+}

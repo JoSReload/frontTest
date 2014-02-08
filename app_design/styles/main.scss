@@ -1,21 +1,42 @@
+@import "variables";
 @import "settings";
 @import 'normalize';
 @import "foundation";
-@import "variables";
 @import "footer";
 @import "clients";
 @import "about";
 @import "services";
 @import "work";
+@import "home";
 
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
-
-
-
-p{
-  font-family: 'Open Sans',sans-serif;
+@font-face {
+  font-family: BebasNeue Bold;
+  src: url('fonts/BebasNeue%20Bold.otf');
+  font-weight: bold;
 }
+@font-face {
+  font-family: BebasNeue Regular;
+  src: url('fonts/BebasNeue%20Regular.otf');
+  font-weight: bold;
+}
+
+h1 { font-size: $h1-font-size - rem-calc(0); }
+h2 { font-size: $h2-font-size - rem-calc(0); }
+h3 { font-size: $h3-font-size - rem-calc(0); }
+h4 { font-size: $h4-font-size - rem-calc(0); }
+h5 { font-size: $h5-font-size; }
+h6 { font-size: $h6-font-size; }
+
+.tab-bar{
+  .tab-bar-section{
+    h1, h2, h3, h4, h5, h6{
+      font-size: $h3-font-size;
+    }
+  }
+}
+
 h1 {
   text-transform: uppercase;
 }
