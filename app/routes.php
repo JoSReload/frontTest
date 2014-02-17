@@ -2,6 +2,6 @@
 
 Route::get('/', function() {
 
-    return getenv('DB_NAME');
+    return getenv('DB_USER');
 
 });
