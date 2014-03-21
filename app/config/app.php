@@ -106,8 +106,10 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-        'TwigBridge\TwigServiceProvider',
 
+        'TwigBridge\TwigServiceProvider',
+        'Way\Generators\GeneratorsServiceProvider',
+        'Josreload\ChenkaCrud\ChenkaCrudServiceProvider'
 	),
 
 	/*

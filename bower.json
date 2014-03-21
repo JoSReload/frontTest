@@ -1,12 +1,12 @@
 {
-	"name": "frontTest",
-	"private": true,
-	"dependencies": {
-        "foundation": "master",
-		"modernizr": "~2.6.2",
-		"backbone": "~1.1.0",
-		"underscore": "~1.5.2",
-		"jquery": "~2.1.0"
-	},
-	"devDependencies": {}
+  "name": "frontTest",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.7.2",
+    "backbone": "~1.1.0",
+    "underscore": "~1.6.0",
+    "jquery": "~2.1.0",
+    "bootstrap-sass-official": "~3.1.0"
+  },
+  "devDependencies": {}
 }

@@ -1,10 +1,10 @@
 node_modules
-.tmp
-.idea
-.sass-cache
+/.tmp
+/.idea
+/.sass-cache
 .directory
 app_design/bower_components/
-dist_design
+/public/statics/
 /bootstrap/compiled.php
 /vendor
 composer.phar
@@ -12,3 +12,4 @@ composer.lock
 npm-debug.log
 .DS_Store
 Thumbs.db
+.env.development.php
