@@ -16,7 +16,7 @@
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/chenka-crud.css -->
-  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/chenka-crud.css">
   <!-- endbuild -->
   <!-- build:js scripts/vendor/modernizr.js -->
   <script src="bower_components/modernizr/modernizr.js"></script>
@@ -24,8 +24,37 @@
 
 </head>
 <body>
+  <div class="container">
+      <form role="form" class="form-signin">
+        <h2><span class="label label-primary">ChenkaCrud</span></h2>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="form-group">
+            <!--<label for="exampleInputEmail1">Email address</label>-->
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <!--<label for="exampleInputPassword1">Password</label>-->
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Remember me
+                </label>
+              </div>
+            </div>
+            <div class="form-group footer-group">
+              <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+              <a href="#">Forgot Password?</a>
+            </div>
+          </div>
+        </div>
+      </form>
+  </div>
 
-  <h1>Login</h1>
+
+  
   <!-- build:js scripts/vendor.js -->
   <!-- bower:js -->
   <script src="bower_components/underscore/underscore.js"></script>
@@ -56,18 +85,18 @@
   </script>
 
   <!-- build:js scripts/plugins.js -->
-  <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js"></script>
-  <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js"></script>
-  <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
-  <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
-  <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal.js"></script>
-  <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js"></script>
-  <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js"></script>
-  <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/popover.js"></script>
-  <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/carousel.js"></script>
-  <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/scrollspy.js"></script>
-  <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js"></script>
-  <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js"></script>
+  <!--<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js"></script>-->
+  <!--<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js"></script>-->
+  <!--<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js"></script>-->
+  <!--<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tooltip.js"></script>-->
+  <!--<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal.js"></script>-->
+  <!--<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js"></script>-->
+  <!--<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js"></script>-->
+  <!--<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/popover.js"></script>-->
+  <!--<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/carousel.js"></script>-->
+  <!--<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/scrollspy.js"></script>-->
+  <!--<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js"></script>-->
+  <!--<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js"></script>-->
   <!-- endbuild -->
 
   <!-- build:js({app,.tmp}) scripts/main.js -->
