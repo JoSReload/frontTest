@@ -108,7 +108,8 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
         'TwigBridge\TwigServiceProvider',
-        'Way\Generators\GeneratorsServiceProvider'
+        'Way\Generators\GeneratorsServiceProvider',
+        'Josreload\ChenkaCrud\ChenkaCrudServiceProvider'
 	),
 
 	/*
