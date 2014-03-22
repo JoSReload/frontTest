@@ -6,9 +6,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>
-        @yield('title', 'ChenkaCrud')
-    </title>
+    <title>@yield('title', 'ChenkaCrud')</title>
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
@@ -22,7 +20,7 @@
     @show
 </head>
 
-<body>
+<body class="@yield('body_class', '')">
     <!--[if lt IE 10]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
