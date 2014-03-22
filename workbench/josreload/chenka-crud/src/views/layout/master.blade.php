@@ -18,7 +18,7 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="stylesheet" href="{{ asset('statics/styles/vendor.css') }}"/>
         <link rel="stylesheet" href="{{ asset('statics/styles/chenka-crud.css') }}"/>
-        <script src="{{ asset('scripts/vendor/modernizr.js') }}"></script>
+        <script src="{{ asset('statics/scripts/vendor/modernizr.js') }}"></script>
     @show
 </head>
 
