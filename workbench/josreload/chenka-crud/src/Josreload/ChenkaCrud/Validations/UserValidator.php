@@ -1,10 +1,13 @@
 <?php namespace Josreload\ChenkaCrud\Validations;
 
-class UserValidator extends ValidatorBase {
+use Validator;
+
+class UserValidator extends ValidatorBase implements LoginValidatorInterface{
 
 
     protected $insertRules;
     protected $updateRules;
+    protected $loginRules;
 
     function __construct()
     {
@@ -20,14 +23,29 @@ class UserValidator extends ValidatorBase {
             'email' => 'required|email',
             'password' => 'required'
         );
+        $this->loginRules = array(
+            'email' =>  'required|email',
+            'password' => 'required'
+        );
     }
 
-    function getRulesForCreation()
+    protected function getRulesForCreation()
     {
         return $this->insertRules;
     }
 
-    function getRulesForUpdate() {
+    protected function getRulesForUpdate() {
         return $this->updateRules;
+    }
+
+    public function isValidForLogin($input)
+    {
+        $validator = Validator::make($input, $this->getRulesForLogin());
+        return $this->check($validator);
+    }
+
+    protected function getRulesForLogin()
+    {
+        return $this->loginRules;
     }
 }

@@ -1,10 +1,13 @@
 <?php namespace Josreload\ChenkaCrud\Controllers;
 
-use Auth, Redirect, Session;
+use Auth, Redirect, Session, View, Input, Hash;
+use Josreload\ChenkaCrud\Validations\LoginValidatorInterface;
 
 class SessionsController extends BaseController {
 
-    function __construct()
+    protected $validator;
+
+    function __construct(LoginValidatorInterface $validator)
     {
         $this->whitelist = array(
             'create',
@@ -12,6 +15,7 @@ class SessionsController extends BaseController {
             'destroy'
         );
         parent::__construct();
+        $this->validator = $validator;
     }
 
 
@@ -23,8 +27,8 @@ class SessionsController extends BaseController {
 	public function create()
 	{
         if(Auth::check())
-            return Redirect::action('Josreload\ChenkaCrud\Controllers\DashController@index');
-        return 'login';
+            return Redirect::action('Josreload\ChenkaCrud\Controllers\DashController@dashboard');
+        return View::make('chenka-crud::sessions.login');
 	}
 
 	/**
@@ -34,7 +38,18 @@ class SessionsController extends BaseController {
 	 */
 	public function store()
 	{
-		//
+        $input = Input::all();
+        if( $this->validator->isValidForLogin( $input )) {
+            $attempt = Auth::attempt([
+                'email' => $input['email'],
+                'password' => $input['password']
+            ]);
+
+            if($attempt)
+                return Redirect::action('Josreload\ChenkaCrud\Controllers\DashController@dashboard');
+            return Redirect::action('Josreload\ChenkaCrud\Controllers\SessionsController@create')->withInput();
+        }
+        return Redirect::action('Josreload\ChenkaCrud\Controllers\SessionsController@create')->withInput();
 	}
 
 	/**
@@ -47,7 +62,7 @@ class SessionsController extends BaseController {
         Auth::logout();
         Session::flush();
 
-        return Redirect::action('Josreload\ChenkaCrud\Controllers\SessionController@create');
+        return Redirect::action('Josreload\ChenkaCrud\Controllers\SessionsController@create');
 	}
 
 }

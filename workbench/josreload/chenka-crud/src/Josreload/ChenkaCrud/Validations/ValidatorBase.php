@@ -20,7 +20,7 @@ abstract class ValidatorBase {
         return $this->errors;
     }
 
-    private function check($validator)
+    protected function check($validator)
     {
         if($validator->fails()) {
             $this->errors = $validator->messages();
@@ -29,7 +29,7 @@ abstract class ValidatorBase {
         return true;
     }
 
-    abstract function getRulesForCreation();
+    abstract protected function getRulesForCreation();
 
-    abstract function getRulesForUpdate();
+    abstract protected function getRulesForUpdate();
 }
