@@ -1,5 +1,7 @@
 <?php namespace Josreload\ChenkaCrud\Controllers;
 
+use View;
+
 class DashController extends BaseController {
 
 
@@ -16,7 +18,7 @@ class DashController extends BaseController {
 	 */
 	public function dashboard()
 	{
-        return 'DashBoard';
+        return View::make('chenka-crud::dashboard.dashboard');
 	}
 
 }
