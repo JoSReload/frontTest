@@ -13,6 +13,7 @@ Route::filter('admin', 'Josreload\ChenkaCrud\Filters\Admin');
 |---------------------------------------------------------------------
 */
 App::bind('Josreload\ChenkaCrud\Accounts\UserInterface', 'Josreload\ChenkaCrud\Accounts\UserRepository');
+App::bind('Josreload\ChenkaCrud\Validations\LoginValidatorInterface', 'Josreload\ChenkaCrud\Validations\UserValidator');
 
 /*
 |---------------------------------------------------------------------
@@ -25,6 +26,7 @@ Route::group(['prefix' => Config::get('chenka-crud::app.access_url')], function(
     Route::get('', 'Josreload\ChenkaCrud\Controllers\DashController@dashboard');
 
     Route::get('login', 'Josreload\ChenkaCrud\Controllers\SessionsController@create');
+    Route::post('login', 'Josreload\ChenkaCrud\Controllers\SessionsController@store');
     Route::get('logout', 'Josreload\ChenkaCrud\Controllers\SessionsController@destroy');
     Route::resource('sessions', 'Josreload\ChenkaCrud\Controllers\SessionsController',
         ['only' => ['create', 'store', 'destroy']]);

@@ -28,7 +28,7 @@ return array(
 	|
 	*/
 
-	'model' => 'User',
+	'model' => 'Josreload\ChenkaCrud\Accounts\User',
 
 	/*
 	|--------------------------------------------------------------------------
