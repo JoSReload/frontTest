@@ -1,21 +1,44 @@
-## Laravel PHP Framework
+## ChenkaCrud
 
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/version.png)](https://packagist.org/packages/laravel/framework) [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.png)](https://packagist.org/packages/laravel/framework) [![Build Status](https://travis-ci.org/laravel/framework.png)](https://travis-ci.org/laravel/framework)
+## Configuration
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+* Go to the package directory
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+        cd workbench/josreload/chenka-crud
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+* Install composer dependencies
 
-## Official Documentation
+        composer update
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
+* Go to the project's root and install composer dependencies
 
-### Contributing To Laravel
+        composer update
 
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
+* Create the .env.development.php file based on the env.example.php
+
+        'DB_HOST' => '',
+        'DB_NAME' => '',
+        'DB_USER' => '',
+        'DB_PASSWORD' => ''
+
+* Run migration
+
+        php artisan migration --bench="josreload/chenka-crud"
+
+* Seed the database
+
+        php artisan db:seed --class="Josreload\ChenkaCrud\Seeds\UserTableSeeder"
+
+* Also you can install bower and npm dependencies to work with the front-end
+
+        npm install
+        bower install
+
+* Run grunt
+
+        grunt serve
+
+And that's it, you're ready!
 
 ### License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
