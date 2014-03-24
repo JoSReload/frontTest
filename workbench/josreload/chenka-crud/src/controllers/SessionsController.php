@@ -1,20 +1,22 @@
 <?php namespace Josreload\ChenkaCrud\Controllers;
 
 use Auth, Redirect, Session, View, Input, Hash;
+use Josreload\ChenkaCrud\Sessions\Creator;
+use Josreload\ChenkaCrud\Sessions\ListenerSessionCreate;
 use Josreload\ChenkaCrud\Validations\LoginValidatorInterface;
 
-class SessionsController extends BaseController {
+class SessionsController extends BaseController implements ListenerSessionCreate{
 
     protected $validator;
 
     function __construct(LoginValidatorInterface $validator)
     {
-        $this->whitelist = array(
+        $whitelist = array(
             'create',
             'store',
             'destroy'
         );
-        parent::__construct();
+        parent::__construct($whitelist);
         $this->validator = $validator;
     }
 
@@ -38,18 +40,9 @@ class SessionsController extends BaseController {
 	 */
 	public function store()
 	{
-        $input = Input::all();
-        if( $this->validator->isValidForLogin( $input )) {
-            $attempt = Auth::attempt([
-                'email' => $input['email'],
-                'password' => $input['password']
-            ]);
+        $creator = new Creator($this, $this->validator);
 
-            if($attempt)
-                return Redirect::action('Josreload\ChenkaCrud\Controllers\DashController@dashboard');
-            return Redirect::action('Josreload\ChenkaCrud\Controllers\SessionsController@create')->withInput();
-        }
-        return Redirect::action('Josreload\ChenkaCrud\Controllers\SessionsController@create')->withInput();
+        return $creator->create(Input::all());
 	}
 
 	/**
@@ -65,4 +58,13 @@ class SessionsController extends BaseController {
         return Redirect::action('Josreload\ChenkaCrud\Controllers\SessionsController@create');
 	}
 
+    public function sessionCreationSucceeds()
+    {
+        return Redirect::action('Josreload\ChenkaCrud\Controllers\DashController@dashboard');
+    }
+
+    public function sessionCreationFails()
+    {
+        return Redirect::action('Josreload\ChenkaCrud\Controllers\SessionsController@create')->withInput();
+    }
 }

@@ -1,6 +1,6 @@
 <?php namespace Josreload\ChenkaCrud\Controllers;
 
-use Config;
+use Config, View;
 
 abstract class BaseController extends \Controller{
 
@@ -10,24 +10,10 @@ abstract class BaseController extends \Controller{
      */
     protected $whitelist;
 
-    function __construct()
+    function __construct($whitelist = [])
     {
-        $this->beforeFilter( 'admin' , array('except' => $this->whitelist));
+        $this->beforeFilter( 'admin' , array('except' => $whitelist));
 
-        $this->whitelist = array();
+        $this->whitelist = $whitelist;
     }
-
-
-    /**
-     * Setup the layout used by the controller.
-     *
-     * @return void
-     */
-    protected function setupLayout()
-    {
-        if ( ! is_null($this->layout))
-        {
-            $this->layout = View::make($this->layout);
-        }
-    }
-} 
+}
