@@ -1,4 +1,5 @@
 <?php namespace Josreload\ChenkaCrud;
+
 use App;
 use Illuminate\Support\ServiceProvider;
 
@@ -20,11 +21,15 @@ class ChenkaCrudServiceProvider extends ServiceProvider {
 	{
 		$this->package('josreload/chenka-crud');
 
+        include __DIR__.'/../../filters.php';
+
+        include __DIR__.'/../../binds.php';
+
         include __DIR__.'/../../routes.php';
 
         include __DIR__.'/../../composers.php';
-
     }
+
 
 	/**
 	 * Register the service provider.

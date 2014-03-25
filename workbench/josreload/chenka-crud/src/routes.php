@@ -2,21 +2,6 @@
 
 /*
 |---------------------------------------------------------------------
-| Laravel Filter Association
-|---------------------------------------------------------------------
-*/
-Route::filter('admin', 'Josreload\ChenkaCrud\Filters\Admin');
-
-/*
-|---------------------------------------------------------------------
-| Laravel Binds
-|---------------------------------------------------------------------
-*/
-App::bind('Josreload\ChenkaCrud\Accounts\UserInterface', 'Josreload\ChenkaCrud\Accounts\UserRepository');
-App::bind('Josreload\ChenkaCrud\Validations\LoginValidatorInterface', 'Josreload\ChenkaCrud\Validations\UserValidator');
-
-/*
-|---------------------------------------------------------------------
 | Routes Admin
 |---------------------------------------------------------------------
 */
@@ -33,6 +18,16 @@ Route::group(['prefix' => Config::get('chenka-crud::app.access_url')], function(
 
     Route::resource('posts', 'Josreload\ChenkaCrud\Controllers\PostsController');
     Route::resource('users', 'Josreload\ChenkaCrud\Controllers\UsersController');
+    Route::group(['prefix' => 'settings'], function(){
+        Route::get('', function(){
+            return Redirect::to(Config::get('chenka-crud::app.access_url') . '/settings/profile');
+        });
+        Route::get('profile', function(){
+            return 'profile';
+        });
+    });
+
+
 });
 
 
