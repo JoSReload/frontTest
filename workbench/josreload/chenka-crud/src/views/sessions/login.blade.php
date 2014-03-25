@@ -1,4 +1,4 @@
-@extends('chenka-crud::layout.master')
+@extends('chenka-crud::layouts.master')
 
 @section('title')
     ChenkaCrud | Login
