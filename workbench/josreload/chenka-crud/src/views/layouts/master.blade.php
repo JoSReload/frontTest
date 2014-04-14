@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="{{ asset('statics/styles/vendor.css') }}"/>
         <link rel="stylesheet" href="{{ asset('statics/styles/chenka-crud.css') }}"/>
         <script src="{{ asset('statics/scripts/vendor/modernizr.js') }}"></script>
+        <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
     @show
 </head>
 

@@ -2,8 +2,7 @@
 
 return array(
 
-    'name' => 'Chenka Crud',
-
+    'app_name' => 'ChenkaCrud',
     'access_url' => 'admin'
 
 );

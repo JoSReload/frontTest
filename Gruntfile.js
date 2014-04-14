@@ -324,6 +324,15 @@ module.exports = function (grunt) {
                 cwd: '<%= config.app %>/styles',
                 dest: '.tmp/styles/',
                 src: '{,*/}*.css'
+            },
+            ckeditor: {
+                expand: true,
+                dot: true,
+                cwd: '<%= config.app %>/bower_components',
+                dest: '<%= config.dist %>',
+                src: [
+                    'ckeditor/**/*.*'
+                ]
             }
         },
 
@@ -402,6 +411,7 @@ module.exports = function (grunt) {
         'cssmin',
         'uglify',
         'copy:dist',
+        'copy:ckeditor',
         'modernizr',
 //        'rev',
         'usemin'

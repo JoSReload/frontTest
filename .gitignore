@@ -5,6 +5,7 @@ node_modules
 .directory
 app_design/bower_components/
 /public/statics/
+/public/ckeditor/
 /bootstrap/compiled.php
 /vendor
 composer.phar
