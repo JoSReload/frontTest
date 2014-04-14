@@ -23,8 +23,6 @@ class ChenkaCrudServiceProvider extends ServiceProvider {
 
         include __DIR__.'/../../filters.php';
 
-        include __DIR__.'/../../binds.php';
-
         include __DIR__.'/../../routes.php';
 
         include __DIR__.'/../../composers.php';
@@ -38,7 +36,9 @@ class ChenkaCrudServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		//
+        $this->app->bind('Josreload\ChenkaCrud\Accounts\UserInterface', 'Josreload\ChenkaCrud\Accounts\UserRepository');
+        $this->app->bind('Josreload\ChenkaCrud\Validations\LoginValidatorInterface', 'Josreload\ChenkaCrud\Validations\UserValidator');
+
 	}
 
 	/**

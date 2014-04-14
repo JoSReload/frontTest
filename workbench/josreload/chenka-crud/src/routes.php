@@ -5,6 +5,9 @@
 | Routes Admin
 |---------------------------------------------------------------------
 */
+Route::post('posting', function(){
+    echo dd(htmlspecialchars(Input::get('editor1')));
+});
 
 Route::group(['prefix' => Config::get('chenka-crud::app.access_url')], function() {
 
